@@ -77,6 +77,9 @@ if(CRYPTO_BACKEND STREQUAL "OpenSSL" OR NOT CRYPTO_BACKEND)
       # This should really be handled by FindOpenSSL.cmake.
       list(APPEND LIBRARIES crypt32)
       list(APPEND PC_LIBS -lcrypt32)
+      
+      list(APPEND LIBRARIES advapi32)
+      list(APPEND PC_LIBS -ladvapi32)
 
       find_file(DLL_LIBEAY32
         NAMES libeay32.dll crypto.dll libcrypto-1_1.dll libcrypto-1_1-x64.dll
