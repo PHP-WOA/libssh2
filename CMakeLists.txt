@@ -33,13 +33,15 @@
 # USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
 # OF SUCH DAMAGE.
 
-cmake_minimum_required(VERSION 2.8.11)
+cmake_minimum_required(VERSION 3.15)
 
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 project(libssh2 C)
 set(PROJECT_URL "https://www.libssh2.org/")
 set(PROJECT_DESCRIPTION "The SSH library")
+
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 
 if (CMAKE_VERSION VERSION_LESS "3.1")
   if (CMAKE_C_COMPILER_ID STREQUAL "GNU")

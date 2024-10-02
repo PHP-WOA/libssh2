@@ -1,0 +1,8 @@
+.vs
+build
+install
+libssh2_config.h
+Libssh2ConfigVersion.cmake
+libssh2.pc
+CPackSourceConfig.cmake
+CPackConfig.cmake

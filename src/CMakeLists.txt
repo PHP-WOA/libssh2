@@ -33,6 +33,8 @@
 # USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
 # OF SUCH DAMAGE.
 
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+
 include(CheckFunctionExists)
 include(CheckSymbolExists)
 include(CheckFunctionExistsMayNeedLibrary)
